@@ -6,7 +6,7 @@ const Department = ({ department }) => {
     <>
       <h1>Department: {title}</h1>
       <hr />
-      <a href={`/department/${id}/products`}>Products</a>
+      <a href={`/departments/${id}/products`}>Products</a>
       
     </>
   )
