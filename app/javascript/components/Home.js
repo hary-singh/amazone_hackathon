@@ -5,7 +5,8 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <h1>Home Page</h1>
+      <h1>Home Page</h1><br/>
+      <a href="/departments">Click to go to Departments</a>
     </>
   )
 }
