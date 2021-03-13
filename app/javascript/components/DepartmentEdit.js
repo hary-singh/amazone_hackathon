@@ -20,4 +20,4 @@ const DepartmentEdit = ({ department }) => {
     </>
   )
 }
-export default DepartmentTitle;
+export default DepartmentEdit;
