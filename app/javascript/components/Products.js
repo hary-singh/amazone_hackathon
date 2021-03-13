@@ -1,7 +1,7 @@
 import React from "react";
 
-const Products = ({ product, sub }) => {
-    const { name, id } = Department;
+const Products = ({ product, department }) => {
+    const { name, id } = department;
     return (
       <>
         <h1>Products From {name} Departments</h1>

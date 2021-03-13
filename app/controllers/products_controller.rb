@@ -1,50 +1,53 @@
 class ProductsController < ApplicationController
   before_Action :set_product, except: [ :index, :new, :create]
   def index
-    @products = Product.all 
-    render component: "Products", props: { products: @products }
+    @products = @department.products 
+    render component: "Products", props: { department: @department , products: @products }
   end
 
   def show
-    render component: "Product", props: { product: @product }
+    render component: "Product", props: { department: @department , product: @product }
   end
 
   def new
-    @product = Product.new
-    render component: "ProductNew", props: { product: @product }
+    @product = @department.product.new
+    render component: "ProductNew", props: { department: @department , product: @product }
   end
 
   def edit
-    render component: "ProductEdit", props: { product: @product }
+    render component: "ProductEdit", props: { department: @department , product: @product }
   end
 
   def create
-    @product = Product.new(product_params)
+    @product = @department.products.new(product_params)
     if @product.save
       redirect_to @product
     else
-      render component: "ProductNew", props: { product: @product }
+      render component: "ProductNew", props: { department: @department , product: @product }
   end
 
   def update
     if @product.update(product_params)
       redirect_to @product
     else
-      render component: "ProductEdit", props: { product: @product } 
+      render component: "ProductEdit", props: { department: @department , product: @product } 
   end
 
   def destroy
     @product.destroy
-    redirect_to products_path
+    redirect_to departments_products_path(@department)
   end
 
   private
     def set_product
-      @product = Product.find(params[:id])
+      @product = @department.products.find(params[:id])
     end
 
     def product_params
       params.require(:product).permit(:name)
     end
-
+    
+    def set_department
+      @department = current_user.department.find(params[:department_id])
+    end
 end
