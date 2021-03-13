@@ -12,12 +12,12 @@ const ProductEdit = ({ product, department }) => {
           <p>Name</p>
           <input defaultValue={name} name="product[name]" type="text" />
           <p>Price</p>
-          <textarea defaultValue={price} name="product[price]" />
+          <input defaultValue={price} name="product[price]" />
           <p>Stock</p>
-          <textarea defaultValue={stock} name="product[stock]" />
+          <input defaultValue={stock} name="product[stock]" />
           <p>Description</p>
-          <textarea defaultValue={description} name="product[description]" /><br/>
-          <button type="submit">update</button>
+          <input defaultValue={description} name="product[description]" /><br/><hr/>
+          <button className="btn" type="submit">update</button>
         </form>
       </>
     );

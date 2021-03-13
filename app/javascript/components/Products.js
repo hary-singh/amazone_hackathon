@@ -9,8 +9,6 @@ const Products = ({ products, department }) => {
         {products.map((product) => (
           <div key={product.id} className="product-card">
             <h3>{product.name}</h3>
-            <p>{product.price}</p>
-            <p>{product.stock}</p>
             <a href={`/departments/${department.id}/products/${product.id}`}>  Product show  </a><br/>
             <a href={`/departments/${department.id}/products/${product.id}/edit`}>  Product Edit  </a><br/> 
             <a href={`/departments/${department.id}/products/${product.id}`} data-method="delete"><br/>

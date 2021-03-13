@@ -10,11 +10,10 @@ const Product = ({ product, department }) => {
           <p>Price: {price}</p>
           <p>Stock remaining: {stock}</p>
           <p>Product description: {description}</p>
-          <a href={`/departments`}>Departments</a>
           <br />
-          <a href={`/`}>Back Departments</a>
+          <a href={`/`}>Back to Home</a>
           <br />
-          <a href={`/departments/${department.id}`}>Department Show</a>
+          <a href={`/departments/${department.id}`}>Back to Departments</a>
         </div>
       </>
     );
