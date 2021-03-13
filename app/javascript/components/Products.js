@@ -4,7 +4,8 @@ const Products = ({ department , products }) => {
     const { title, id } = department;
     return (
       <>
-        <h1>Products From {title} Departments</h1>
+        <h1>Products From {title} Departments</h1><br/>
+        <a href={`/departments/${id}/products/new`}>Add a new Product</a><br/>
         <a href={`/departments/${id}`}>Back</a>
         <br />
         <a href={`/`}>Back To Departments</a>
