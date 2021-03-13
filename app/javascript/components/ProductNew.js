@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ProductNew = ({ product, deprtment }) => {
+const ProductNew = ({ product, department }) => {
     const { id } = department;
     const { name, price, stock, errors } = product;
     const defaultName = name ? name : "";
