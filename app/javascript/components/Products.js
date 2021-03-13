@@ -9,7 +9,7 @@ const Products = ({ product, department }) => {
         <br />
         <a href={`/`}>Back To Departments</a>
         {product.map(() => (
-          <div key={product.id} className="topic-card">
+          <div key={product.id} className="product-card">
             <h3>{product.name}</h3>
             <p>{product.price}</p>
             <p>{product.stock}</p>
