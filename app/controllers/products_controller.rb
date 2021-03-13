@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
+  before_action :set_department
   before_action :set_product, except: [ :index, :new, :create]
+
   def index
     @products = @department.products 
     render component: "Products", props: { department: @department , products: @products }
@@ -50,6 +52,6 @@ class ProductsController < ApplicationController
     end
     
     def set_department
-      @department = current_user.department.find(params[:department_id])
+      @department = current_user.departments.find(params[:department_id])
     end
 end

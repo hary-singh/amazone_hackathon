@@ -1,14 +1,14 @@
 import React from "react";
 
-const Products = ({ product, department }) => {
+const Products = ({ department , products }) => {
     const { title, id } = department;
     return (
       <>
         <h1>Products From {title} Departments</h1>
-        <a href={`/departments/${id}`}>back to sub show</a>
+        <a href={`/departments/${id}`}>Back</a>
         <br />
         <a href={`/`}>Back To Departments</a>
-        {product.map(() => (
+        {products.map((product) => (
           <div key={product.id} className="product-card">
             <h3>{product.name}</h3>
             <p>{product.price}</p>
