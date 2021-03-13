@@ -1,12 +1,8 @@
 class ProductsController < ApplicationController
   before_Action :set_product, except: [ :index, :new, :create]
   def index
-<<<<<<< HEAD
     @products = Product.all 
     render component: "Products", props: { products: @products }
-=======
-    
->>>>>>> 2eba856 (components products)
   end
 
   def show
