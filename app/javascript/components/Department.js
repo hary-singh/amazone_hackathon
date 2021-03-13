@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Department = ({ department }) => {
-  const { name } = course
+  const { title } = department
   return (
     <>
-      <h1>Department: {name}</h1>
+      <h1>Department: {title}</h1>
       <hr />
       <a href={`/department/${id}/products`}>Products</a>
       

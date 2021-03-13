@@ -11,8 +11,8 @@ const DepartmentNew = ({ department }) => {
         <input
           placeholder="Name"
           type="text"
-          defaultValue={defaultName}
-          name="department[name]"
+          defaultValue={defaultTitle}
+          name="department[title]"
         />
         <button type="submit">Add</button>
       </form>
