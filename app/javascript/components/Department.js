@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Department = ({ department }) => {
-  const { title } = department
+  const { title , id } = department
   return (
     <>
       <h1>Department: {title}</h1>

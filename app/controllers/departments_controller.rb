@@ -1,44 +1,44 @@
 class DepartmentsController < ApplicationController
   def index
-    @departments = Department.all 
-    render component: 'Departments', props: { departments: @departments }
+    @departments = current_user.departments
+    render component: 'Departments', props: { user: current_user, departments: @departments }
   end
 
   def show
-    @department = Department.find(params[:id])
-    render component: 'Department', props: { department: @department }
+    @department = current_user.departments.find(params[:id])
+    render component: 'Department', props: { user: current_user, department: @department }
   end
 
   def new
-    @department = Department.new
-    render component: 'DepartmentNew', props: { department: @department }
+    @department = current_user.departments.new
+    render component: 'DepartmentNew', props: { user: current_user , department: @department }
   end
 
   def create
-    @department = Department.new(department_params)
+    @department = current_user.departments.new(department_params)
     if @department.save
       redirect_to departments_path
-    else
-      render component: 'DepartmentNew', props: { department: @department }
+    else 
+      render component: 'DepartmentNew', props: { user: current_user, department: @department }
     end
   end
 
   def edit
-    @department = Department.find(params[:id])
-    render component: 'DepartmentEdit', props: { department: @department }
+    @department = current_user.departments.find(params[:id])
+    render component: 'DepartmentEdit', props: { user: current_user , department: @department }
   end
 
   def update
-    @department = Department.find(params[:id])
+    @department = current_user.departments.find(params[:id])
     if @department.update(department_params)
       redirect_to departments_path
     else
-      render component: 'DepartmentEdit', props: { department: @department }
+      render component: 'DepartmentEdit', props: { user: current_user , department: @department }
   end
 end
 
   def destroy
-    @department = Department.find(params[:id])
+    @department = current_user.departments.find(params[:id])
     @department.destroy
     redirect_to departments_path
   end
