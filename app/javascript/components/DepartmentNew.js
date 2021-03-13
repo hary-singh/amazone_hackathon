@@ -1,8 +1,8 @@
 import React from 'react';
 
 const DepartmentNew = ({ department }) => {
-  const { name, errors } = department
-  const defaultName = name ? name : ""
+  const { title, errors } = department
+  const defaultTitle = title ? title : ""
   return(
     <>
       <h1>Add Department</h1>
