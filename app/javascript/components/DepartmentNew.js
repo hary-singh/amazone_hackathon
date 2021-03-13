@@ -7,7 +7,7 @@ const DepartmentNew = ({ department }) => {
     <>
       <h1>Add Department</h1>
       { errors && errors }
-      <form action="/departments" method="post">
+      <form action="/departments/new" method="post">
         <input
           placeholder="Name"
           type="text"
