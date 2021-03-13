@@ -3,10 +3,11 @@ import React from "react";
 
 const ProductNew = ({ product, department }) => {
     const { id } = department;
-    const { name, price, stock, errors } = product;
+    const { name, price, stock, description, errors } = product;
     const defaultName = name ? name : "";
-    const defaultPrice = price ? price : "";
-    const defaultStock = stock ? stock : "";
+    const defaultPrice = price ? price : 0;
+    const defaultStock = stock ? stock : 0;
+    const defaultDescription = description ? description : "";
     return (
       <>
         <h1>Product New</h1>
@@ -16,19 +17,26 @@ const ProductNew = ({ product, department }) => {
           placeholder="Name"
           type="text"
           defaultValue={defaultName}
-          name="Product[name]"
+          name="product[name]"
         />
         <input
-          placeholder="Balance"
+          placeholder="Price"
           type="number"
           defaultValue={defaultPrice}
-          name="Product[Price]"
+          name="product[price]"
         />
         <input
           placeholder="Stock"
           type="number"
           defaultValue={defaultStock}
-          name="Product[stock]"
+          name="product[stock]"
+        />
+
+        <input
+          placeholder="Description"
+          type="text"
+          defaultValue={defaultDescription}
+          name="product[description]"
         />
           <button type="submit"> Add Product</button>
         </form>

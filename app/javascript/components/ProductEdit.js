@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductEdit = ({ product, department }) => {
     const { id } = product;
-    const { name, price, stock, errors } = product;
+    const { name, price, stock, description, errors } = product;
     return (
       <>
         <h1>Product Edit</h1>
@@ -15,7 +15,8 @@ const ProductEdit = ({ product, department }) => {
           <textarea defaultValue={price} name="product[price]" />
           <p>Stock</p>
           <textarea defaultValue={stock} name="product[stock]" />
-          <br />
+          <p>Description</p>
+          <textarea defaultValue={description} name="product[description]" /><br/>
           <button type="submit">update</button>
         </form>
       </>

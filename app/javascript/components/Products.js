@@ -5,7 +5,7 @@ const Products = ({ products, department }) => {
     return (
       <>
         <h1>Products From {title} Departments</h1>
-        
+        <a href={`/departments/${id}/products/new`}>Add Product</a>
         {products.map((product) => (
           <div key={product.id} className="product-card">
             <h3>{product.name}</h3>

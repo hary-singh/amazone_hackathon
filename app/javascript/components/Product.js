@@ -1,7 +1,7 @@
 import React from "react";
 
 const Product = ({ product, department }) => {
-    const { name, price, stock } = product
+    const { name, price, stock, description } = product
     return (
       <>
         <div className="product-card">
@@ -9,6 +9,7 @@ const Product = ({ product, department }) => {
           <h3>Department: {department.title}</h3>
           <p>Price: {price}</p>
           <p>Stock remaining: {stock}</p>
+          <p>Product description: {description}</p>
           <a href={`/departments`}>Departments</a>
           <br />
           <a href={`/`}>Back Departments</a>
