@@ -1,11 +1,11 @@
 import React from "react";
 
 const Products = ({ product, department }) => {
-    const { name, id } = department;
+    const { title, id } = department;
     return (
       <>
-        <h1>Products From {name} Departments</h1>
-        <a href={`/subs/${id}`}>back to sub show</a>
+        <h1>Products From {title} Departments</h1>
+        <a href={`/departments/${id}`}>back to sub show</a>
         <br />
         <a href={`/`}>Back To Departments</a>
         {product.map(() => (
