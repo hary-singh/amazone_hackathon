@@ -1,6 +1,7 @@
 import React from "react";
 
-const ProductNew = ({ product, department }) => {
+
+const ProductNew = ({ product, deprtment }) => {
     const { id } = department;
     const { name, price, stock, errors } = product;
     const defaultName = name ? name : "";
@@ -14,9 +15,9 @@ const ProductNew = ({ product, department }) => {
           <p>Name</p>
           <input defaultValue={defaultName} name="product[name]" type="text" />
           <p>price</p>
-          <textarea defaultValue={defaultPrice} name="product[price]" type="number" />
+          <textarea defaultValue={defaultPrice} name="product[price]" />
           <p>Stock</p>
-          <textarea defaultValue={defaultStock} name="product[stock]" type="number" />
+          <textarea defaultValue={defaultStock} name="product[stock]" />
           <br />
           <button type="submit">Add Product</button>
         </form>
