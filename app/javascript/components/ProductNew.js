@@ -12,14 +12,25 @@ const ProductNew = ({ product, deprtment }) => {
         <h1>Product New</h1>
         {errors && errors}
         <form action={`/departments/${id}/products`} method="post">
-          <p>Name</p>
-          <input defaultValue={defaultName} name="product[name]" type="text" />
-          <p>price</p>
-          <textarea defaultValue={defaultPrice} name="product[price]" />
-          <p>Stock</p>
-          <textarea defaultValue={defaultStock} name="product[stock]" />
-          <br />
-          <button type="submit">Add Product</button>
+        <input
+          placeholder="Name"
+          type="text"
+          defaultValue={defaultName}
+          name="Product[name]"
+        />
+        <input
+          placeholder="Balance"
+          type="number"
+          defaultValue={defaultPrice}
+          name="Product[Price]"
+        />
+        <input
+          placeholder="Stock"
+          type="number"
+          defaultValue={defaultStock}
+          name="Product[stock]"
+        />
+          <button type="submit"> Add Product</button>
         </form>
       </>
     );
