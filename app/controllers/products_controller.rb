@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
-  before_Action :set_product, except
+  before_Action :set_product, except: [ :index, :new, :create]
   def index
-    
+    @products = Product.all 
+    render component: "Products", props: { products: @products }
   end
 
   def show
@@ -21,4 +22,10 @@ class ProductsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def set_product
+      @product = Product.find(params[:id])
+    end
+
 end
