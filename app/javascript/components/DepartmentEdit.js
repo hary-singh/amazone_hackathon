@@ -14,6 +14,7 @@ const DepartmentEdit = ({ department }) => {
           defaultValue={defaultTitle}
           name="department[title]"
         />
+        
         <button type="Submit">Update</button>
       </form>
     </>

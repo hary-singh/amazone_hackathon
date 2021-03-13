@@ -4,8 +4,7 @@ import Navbar from './Navbar';
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <h1>Home Page</h1><br/>
+      <h1 className="heading">Home Page</h1><br/>
       <a href="/departments">Click to go to Departments</a>
     </>
   )

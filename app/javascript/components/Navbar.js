@@ -5,8 +5,12 @@ const Navbar = () => (
     <ul>
       <li>
         <a href="/users/sign_out" data-method="delete">
-          logout
+          Logout
         </a>
+        <li>
+        <a href="/departments/">Departments</a>
+        </li>
+        
       </li>
     </ul>
   </nav>

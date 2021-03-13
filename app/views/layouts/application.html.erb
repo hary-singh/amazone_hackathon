@@ -7,10 +7,24 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+    <script src="https://use.fontawesome.com/59bddc0738.js"></script>
+    <script src="https://kit.fontawesome.com/e3520768a7.js" crossorigin="anonymous"></script>
+
   </head>
 
+  <%= react_component('Navbar', {prerender: true}) %>
+
   <body>
-    <%= react_component('Navbar', {prerender: true}) %>
+   <div class="container">
     <%= yield %>
+    </div>
+    <footer>
+    
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-twitter"></i>
+    </footer
   </body>
+
+  
 </html>

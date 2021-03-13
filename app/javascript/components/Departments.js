@@ -10,6 +10,8 @@ const Departments = ({ departments }) => {
       { departments.map((department) => (
         <div>
           <a href={`/departments/${department.id}`}>{department.title}</a>
+          <br />
+          <a href={`/departments/${department.id}/edit`}>Edit Department</a>
         </div>
       ))}
     </>
