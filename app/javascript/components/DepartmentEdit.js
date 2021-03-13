@@ -14,9 +14,9 @@ const DepartmentEdit = ({ department }) => {
           defaultValue={defaultTitle}
           name="department[title]"
         />
-        <button type="Submit">Update</button>
+        <button className="btn" type="Submit">Update</button>
       </form>
     </>
   )
 }
-export default DepartmentTitle;
+export default DepartmentEdit;
