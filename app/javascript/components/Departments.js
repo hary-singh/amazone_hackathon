@@ -1,6 +1,6 @@
 import React from "react";
 
-const Departments = ({ departments }) => {
+const Departments = ({ department }) => {
   return (
     <>
       <h1>Departments</h1>
