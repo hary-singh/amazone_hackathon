@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
   def create
     @product = @department.products.new(product_params)
     if @product.save
-      redirect_to departments_products_path(@department)
+      redirect_to department_products_path(@department)
     else
       render component: "ProductNew", props: { department: @department , product: @product }
     end
@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to departments_products_path(@department)
+      redirect_to department_products_path(@department)
     else
       render component: "ProductEdit", props: { department: @department , product: @product } 
     end
@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to departments_products_path(@department)
+    redirect_to department_products_path(@department)
   end
 
   private

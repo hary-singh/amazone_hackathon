@@ -14,9 +14,9 @@ const ProductNew = ({ product, department }) => {
           <p>Name</p>
           <input defaultValue={defaultName} name="product[name]" type="text" />
           <p>price</p>
-          <textarea defaultValue={defaultPrice} name="product[price]" />
+          <textarea defaultValue={defaultPrice} name="product[price]" type="number" />
           <p>Stock</p>
-          <textarea defaultValue={defaultStock} name="product[stock]" />
+          <textarea defaultValue={defaultStock} name="product[stock]" type="number" />
           <br />
           <button type="submit">Add Product</button>
         </form>

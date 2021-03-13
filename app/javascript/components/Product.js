@@ -1,14 +1,14 @@
 import React from "react";
 
 const Product = ({ product, department }) => {
-    const { name, price, stock } = topic
+    const { name, price, stock } = product
     return (
       <>
         <div className="product-card">
           <h1>Product: {name}</h1>
-          <h6>Department: {department.name}</h6>
-          <p>{price}</p>
-          <p>{stock}</p>
+          <h3>Department: {department.title}</h3>
+          <p>Price: {price}</p>
+          <p>Stock remaining: {stock}</p>
           <a href={`/departments`}>Departments</a>
           <br />
           <a href={`/`}>Back Departments</a>
