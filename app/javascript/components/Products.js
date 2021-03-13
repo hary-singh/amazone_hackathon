@@ -15,7 +15,7 @@ const Products = ({ product, sub }) => {
             <p>{product.stock}</p>
             <a href={`/departments/${department.id}/products/${product.id}`}>  Product show  </a>
             <a href={`/departments/${department.id}/products/${product.id}/edit`}>  Product Edit  </a> 
-            <a href={`/subs/${sub.id}/topics/${topic.id}`} data-method="delete">
+            <a href={`/departments/${department.id}/products/${product.id}`} data-method="delete">
                Product Delete
             </a>
           </div>
