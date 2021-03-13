@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_Action :set_product, except: [ :index, :new, :create]
+  before_action :set_product, except: [ :index, :new, :create]
   def index
     @products = @department.products 
     render component: "Products", props: { department: @department , products: @products }
@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
       redirect_to @product
     else
       render component: "ProductNew", props: { department: @department , product: @product }
+    end
   end
 
   def update
@@ -31,6 +32,7 @@ class ProductsController < ApplicationController
       redirect_to @product
     else
       render component: "ProductEdit", props: { department: @department , product: @product } 
+    end
   end
 
   def destroy
