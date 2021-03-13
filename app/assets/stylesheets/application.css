@@ -115,3 +115,12 @@ nav {
   text-decoration: underline;
   text-shadow: 0px 0px 10px rgb(4, 172, 223);
  }
+ .copyright{
+  color: #128888;
+  font-size: 0.75rem;
+  padding: 20px 0px;
+}
+.bottom-container{
+  background-color: #66bfbf;
+  padding: 50px 0 20px;
+}

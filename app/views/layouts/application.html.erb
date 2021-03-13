@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> 
     <title>Wolves of DevPoint</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+    <script src="https://use.fontawesome.com/59bddc0738.js"></script>
+    <script src="https://kit.fontawesome.com/e3520768a7.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <%= react_component('Navbar', {prerender: true}) %>
     <%= yield %>
+    
+
+          <footer>
+      <div class="footer">
+        <i class="fab fa-facebook" href="https://www.facebook.com/"></i>
+        <i class="fab fa-instagram" href="https://www.instagram.com/"></i>
+        <i class="fab fa-twitter" href="https://www.twitter.com"></i>
+        <p class="copyright">© 2021 Wolves of DevPoint.</p>
+      </div>
+    </footer>
   </body>
+
 </html>
