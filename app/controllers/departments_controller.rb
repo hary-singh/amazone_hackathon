@@ -6,7 +6,7 @@ class DepartmentsController < ApplicationController
 
   def show
     @department = Department.find(params[:id])
-    render component: 'Department,' props: { department: @department }
+    render component: 'Department', props: { department: @department }
   end
 
   def new
